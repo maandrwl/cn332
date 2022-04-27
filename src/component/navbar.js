@@ -56,7 +56,8 @@ export default class NavbarComp extends Component {
                     <Route path="/Dashboard" element={<Dashboard />} />
                     <Route path="/Myproject" element={<Myproject />} />
                     <Route path="/Createproject" element={<Createproject />} />
-                    <Route path="/Projectdetail" element={<Projectdetail />} />
+                    <Route path="/blogs/:id" element={<Projectdetail />} />
+            
                 </Routes>
                 </div>
             </Router>

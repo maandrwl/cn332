@@ -1,24 +1,33 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import './Style.css';
+import { useParams } from "react-router-dom";
+import useFetch from "./useFetch";
 
-export default class Projectdetail extends Component {
-    render() {
+const ProjectDetails = () => {
+    const { id } = useParams();
+    const { data: blog} = useFetch('http://localhost:3000/blogs/' + id);
         return (
-            <div>
+            <div className="blog-details">
                 <br></br>
                 <Container>
                     <Row className="row"> 
                         <Col className="column" md="6" >
-                        Name:
+                        Name: { blog.title }
                         <br></br>
-                        Status:
+                        Status: { blog.status }
                         </Col>
                         <Col className="column" >Variable width content</Col>
                     </Row>
                     <Row className="row">
-                        <Col className="column" >Project Requirment</Col>
-                        <Col className="column" >Detail:</Col>
+                        <Col className="column" >Project Requirment:
+                        <br />
+                        { blog.requirement }
+                        </Col>
+                        <Col className="column" >Detail:
+                        <br />
+                        { blog.detail }
+                        </Col>
                     </Row>
                     <Row className="row">
                         <Col className="column" xs lg="6">1 of 3</Col>
@@ -31,4 +40,4 @@ export default class Projectdetail extends Component {
             </div>
         )
     }
-}
+    export default ProjectDetails;

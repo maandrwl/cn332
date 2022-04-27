@@ -13,7 +13,7 @@ export default class Myproject extends Component {
                     <div>
                         <Row className="row">
                             <Col className="column">
-                            <Link as={Link} to={"/Projectdetail"}>
+                            <Link as={Link} to={"/blogs"}>
                                 <Button variant="secondary" className='button'>Project Detail</Button>{' '}
                             </Link>
                             </Col>
