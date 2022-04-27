@@ -24,7 +24,7 @@ export default class NavbarComp extends Component {
                             />
                             </Navbar.Brand>
                             <Nav className="me-auto">
-                            <Nav.Link as={Link} to={"/Home"}>Home</Nav.Link>
+                            <Nav.Link as={Link} to={"/"}>Home</Nav.Link>
                             <Nav.Link as={Link} to={"/Dashboard"}>Dashboard</Nav.Link>
                             <Nav.Link as={Link} to={"/Myproject"}>My Project</Nav.Link>
                             <Form className="d-flex">
@@ -52,7 +52,7 @@ export default class NavbarComp extends Component {
                 </div>
                 <div>
                 <Routes>
-                    <Route path="/Home" element={<Home />} />
+                    <Route exact path="/" element={<Home />} />
                     <Route path="/Dashboard" element={<Dashboard />} />
                     <Route path="/Myproject" element={<Myproject />} />
                     <Route path="/Createproject" element={<Createproject />} />

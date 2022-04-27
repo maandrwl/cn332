@@ -26,8 +26,9 @@ const Createproject = () => {
     return (
         <div className="create">
                 <br />
-                <Form onSubmit={handleSubmit}>
+                
                     <Container>
+                        <Form onSubmit={handleSubmit}>
                         <Row className="row"> 
                         
                             <Col className="column" md="3" >
@@ -51,7 +52,6 @@ const Createproject = () => {
                             <Form.Group controlId="formFileMultiple" className="mb-3">
                                 <Form.Control type="file" multiple />
                             </Form.Group>
-                            
                             <Form.Select value={status}
                                 onChange={(e) => setStatus(e.target.value)} >
                             <option>Status</option>
@@ -84,15 +84,15 @@ const Createproject = () => {
                             </Form.Group>
                             </Col>
                         </Row>
+                        <Button variant="secondary">Create Project</Button>
+                       </Form>   
                     </Container>
                     <div>
-                    <Button type='submit' variant="secondary">Create Project</Button>
+                    
                     </div>
-              </Form>  
-            </div>
-            
+              
+            </div> 
     )
-
 }
 
 export default Createproject;

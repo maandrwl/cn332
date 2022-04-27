@@ -7,7 +7,6 @@ const Dashboard = ({ blogs }) => {
     return (
 
         <div>
-                
         <br />
             <Container>
             <Row className="row">
@@ -47,20 +46,24 @@ const Dashboard = ({ blogs }) => {
                 
                 </Col>
                 <Col className="column">
-                {blogs.map(blog => (
+ 
+                </Col>
+            
+            </Row>
+            <div className="blog-list">
+                    {blogs.map((blog) => (
                         <div className="blog-preview"  key={blog.id} >
                             <Link to={`/blogs/${blog.id}`}>
                                 <h2>{ blog.title }</h2>
                                 <p>Detail { blog.detail }</p>
                             </Link>
                         </div>
-                ))}
-                </Col>
-            
-            </Row>
-
+                    ))}
+            </div>
             </Container>
-        </div> 
+        </div>
+        
+        
       
     );
   }
